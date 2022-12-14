@@ -4,5 +4,5 @@ class Pizza:
         self.name = name
         self.toppings = toppings
         self.pizza_shop = pizza_shop
-        self.spice.lvl = spice_lvl
+        self.spice_lvl = spice_lvl
         self.id = id

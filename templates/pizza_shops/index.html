@@ -5,7 +5,7 @@
 {% for pizza in all_pizza_shops %}
 <div>
     <div >
-        {{task.user.first_name}}
+        {{pizza.pizza_shop.name}}
         <div>
             <a href="/pizzas/{{pizza.id}}">{{pizza.name}}</a>
             <span>{{pizza.toppings}}</span>
@@ -13,7 +13,7 @@
         </div>
         
         <div>
-            <form action="pizza/{{pizza.id}}/delete" method="POST"><button>X</button></form>
+            <form action="pizzas/{{pizza.id}}/delete" method="POST"><button>X</button></form>
         </div>
     </div>
 </div>

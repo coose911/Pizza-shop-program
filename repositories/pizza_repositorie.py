@@ -12,4 +12,13 @@ def save(pizza):
     pizza.id = id
     return pizza
 
+def select_all():
+    pizzas = []
+    sql = "SELECT * FROM pizzas"
+    results = run_sql(sql)
     
+    for row in results:
+        pizza_shop = pizza_shop_repositorie.select(row['pizza_shop_id'])
+        pizza = Pizza(row['name'], row['toppings'], pizza_shop, row['id'])
+        pizzas.append(pizza)
+    return pizzas

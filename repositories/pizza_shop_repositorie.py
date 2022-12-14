@@ -10,3 +10,14 @@ def save(pizza_shop):
     id = results[0]['id']
     pizza_shop.id = id
     return pizza_shop
+
+def select_all():
+    pizzas = []
+    sql = "SELECT * FROM pizzas"
+    results = run_sql(sql)
+
+    for row in results:
+        pizza_shop = Pizza_shop(row['name'], row['id'])
+        pizzas.append(pizza_shop)
+
+    return pizzas
