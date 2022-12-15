@@ -1,4 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
+<h1>Pizzas</h1>
+
+{% for pizza in all_pizzas %}
+<div>
+        {{pizza.name}}
+        <div>
+            <a href="/pizzas">{{pizza.name}}</a>
+        </div>
+</div>
+{% endfor %}
 
 {% endblock %}

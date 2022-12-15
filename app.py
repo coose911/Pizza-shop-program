@@ -1,9 +1,9 @@
 from flask import Flask, render_template
-from controllers.pizza_shop_controller import pizza_shop_blueprint
+from controllers.pizza_controller import pizza_blueprint
 
 app = Flask(__name__)
 
-app.register_blueprint(pizza_shop_blueprint)
+app.register_blueprint(pizza_blueprint)
 
 @app.route('/')
 def home():
